@@ -37,8 +37,9 @@ logSeparator
 #compress files into a zip compressed file
 echo " generating ${1}.zip"
 cd .. || true
-zip -r "${1}.zip" "${1}"
+zip -r "${HOME}/${1}.zip" "${1}"
 echo " files compressed to ${1}.zip"
-echo "zip file located at : ${PWD}/${1}.zip"
+echo "zip file located at : ${HOME}/${1}.zip"
+rm -rf ${1} || true
 logSeparator
 
